@@ -1,32 +1,58 @@
 <p align="center"> Project information - LISP Interpreter </p>
 
 <p align="center">
-<a href="#objective">Objective</a> •
-<a href="#technologies">Technologies</a> •
-<a href="#usage">Usage</a> •
-<a href="howitworks">How it works</a> •
-<a href="#contribution">Contributions</a> •
-<a href="#author">Author</a> •
-<a href="#license">License</a>
+  <a href="#objective">Objective</a> •
+  <a href="#technologies">Technologies</a> •
+  <a href="#usage">Usage</a> •
+  <a href="howitworks">How it works</a> •
+  <a href="#license">License</a>
 </p>
 
 <h2 id="objective" > 🎯 Objectives </h2>
 
-A Scheme interpreter written in Python, inspired by the lispy from Peter Norvig. This is a modified version from Luciano Ramalho's implementation of the lispy.
+Lispy is a Scheme interpreter written in Python, inspired by the [lispy from Peter Norvig](http://norvig.com/lispy.html). This is a modified version from Luciano Ramalho's implementation of the [lispy](https://github.com/ramalho/mylis.py) with type checking and a few other features.
 
 <h2 id="technologies"> 🛠 Technologies </h2>
 
 The tools used in the construction of the project were:
 
-- [Name Tech](UrlForTheTech)
+- [Black](https://black.readthedocs.io/en/stable/), a formatter for Python code.
+- [Dialogue-tester](https://package.wiki/dialogue-tester), a dialogue testing tool to help testing REPLs.
+- [Pytest](https://docs.pytest.org/en/latest/), a testing framework for Python.
+- [Python](https://www.python.org/), a powerful, easy to learn, and powerful programming language.
+- [Setuptools](https://setuptools.readthedocs.io/en/latest/setuptools.html) to manage the dependencies of the project.
 
 <h2 id="usage" > 👷 Usage </h2>
 
-- Technologies needed to run locally.
+Install the project using the following command:
 
 ```bash
 # Commands used to start the project.
+pip install .
 ```
+
+Now execute the lispy interpreter using the `lispy` command.
+
+This should put you inside of the interpreter. Then you can exercise your scheme skills.
+
+```sh
+lispy
+```
+
+```scheme
+(define x 1)
+x
+$ 1
+```
+
+Also you can run one of the scheme examples:
+
+```sh
+# Run the first example.
+lispy examples/factorial.scm x=5
+```
+
+x stands for factorial of x (aka x!)
 
 <h2 id="howitworks" > 📚 How it works </h2>
 
@@ -45,14 +71,6 @@ Here is a diagram of the interpretation process:
 ```sh
 program ➡ parse ➡ abstract-syntax-tree ➡ eval ➡ result
 ```
-
-<h2 id="contribution"> 🤝Contribution </h2>
-
-- [Contribution File](./CONTRIBUTING.md)
-
-<h2 id="author"> 💻 Author </h2>
-
-By Name ❤
 
 <h2 id="license"> 📝 License </h2>
 
