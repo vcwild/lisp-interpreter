@@ -28,7 +28,7 @@ Install the project using the following command:
 
 ```bash
 # Commands used to start the project.
-pip install .
+pip install -e .
 ```
 
 Now execute the lispy interpreter using the `lispy` command.
